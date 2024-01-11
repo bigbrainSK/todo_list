@@ -1,0 +1,1 @@
+(()=>{"use strict";document.getElementById("header"),document.getElementById("mainSection");const e=document.getElementById("sidebar"),t=document.createElement("button");t.innerText="new To-do",e.appendChild(t)})();
