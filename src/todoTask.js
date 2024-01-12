@@ -16,7 +16,6 @@
     task.appendChild(taskName);
 
     const taskDescription = document.createElement('textarea');
-    taskDescription.type = 'text';
     taskDescription.setAttribute('placeholder', 'task details');
     taskDescription.setAttribute('maxLength', '100');
     taskDescription.className = 'taskInputDescription';

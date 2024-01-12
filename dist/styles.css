@@ -7,7 +7,7 @@ body {
     text-align:center;
     height:70vw;
     color:white;
-
+    size:80% 80%;
 }
 
 img {
@@ -28,6 +28,7 @@ img {
     justify-content: top;
     background-image:url('clouds.jpg');
     background-repeat:no-repeat;
+    size:90vw;
     background-size: 100% 100%;
 }
 
@@ -43,6 +44,8 @@ img {
 #header {
     grid-row:1;
     grid-column:1 / span 2;
+    background-image:url('monke.jpg');
+    background-size:15%;
 }
 
 button {
@@ -70,6 +73,7 @@ button:hover {
     border: 2px solid black;
     border-radius:20%;
     padding-top:15px;
+    margin:10px;
 }
 
 .taskInput {
@@ -82,7 +86,6 @@ button:hover {
 }
 
 .taskInputDescription {
-    
     background-color:rgba(64, 224, 208, 0.217);
     width:60%;
     height:30%;
