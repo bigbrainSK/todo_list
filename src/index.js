@@ -14,12 +14,13 @@ const todoButton = document.createElement('button');
 todoButton.innerText = 'new To-do';
 sidebar.appendChild(todoButton);
 todoButton.addEventListener('click', () => {
-    //clearDisplay()
+    
     loadTask();
+    clearDisplay();
 })
 
 
-
+    
 
 
 // function clearDisplay() {

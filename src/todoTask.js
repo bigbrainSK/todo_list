@@ -1,7 +1,7 @@
  export function loadTask() {
 
     const task = document.createElement('div');
-    task.setAttribute('id', 'taskDiv');
+    task.setAttribute('class', 'taskDiv');
     document.getElementById('mainSection').appendChild(task);
 
     const taskDiv = document.createElement('div');
@@ -11,7 +11,7 @@
     const taskName = document.createElement('input');
     taskName.type = 'text';
     taskName.setAttribute('placeholder', 'task name');
-    taskName.setAttribute('maxLength', '15');
+    taskName.setAttribute('maxLength', '25');
     taskName.className = 'taskInput';
     task.appendChild(taskName);
 
@@ -32,5 +32,16 @@
     taskPriority.setAttribute('maxLength', '15');
     taskPriority.className = 'taskInput';
     task.appendChild(taskPriority);
-    
+
+    const clearButton = document.createElement('button');
+    clearButton.innerText = 'finished?';
+    clearButton.className = 'taskInput';
+    task.appendChild(clearButton);
+    clearButton.addEventListener('click', clearDiv);
+
+    function clearDiv() {
+        task.remove();
+    }
+
+  
 }
