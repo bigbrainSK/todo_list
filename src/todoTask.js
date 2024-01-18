@@ -1,4 +1,8 @@
+ import {clearDiv} from './gameLogic';
+ 
+
  export function loadTask() {
+
 
     const task = document.createElement('div');
     task.setAttribute('class', 'taskDiv');
@@ -37,11 +41,10 @@
     clearButton.innerText = 'finished?';
     clearButton.className = 'taskInput';
     task.appendChild(clearButton);
-    clearButton.addEventListener('click', clearDiv);
+    clearButton.addEventListener('click', ()=> {
+        clearDiv(task);
+    });
 
-    function clearDiv() {
-        task.remove();
-    }
 
-  
+   
 }
