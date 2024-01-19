@@ -20,7 +20,7 @@ export function taskFinishTime(time, task) {   //need to give individual divs a 
 
 
 
-export function clearDisplay() {
+export function clearDisplay(task) {
         while(task.firstChild) {
         task.removeChild(task.firstChild);
         }
