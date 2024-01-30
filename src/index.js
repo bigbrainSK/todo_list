@@ -1,31 +1,37 @@
+import './loadPage';
+import './todoTask';
 import './gameLogic';
-import './loadDueTime';
-import './storage';
 
-import { taskFinishTime, clearDisplay } from './gameLogic';
+import { clearDisplay } from './gameLogic';
 import {loadTask} from './todoTask';
-import { loadDaily, loadWeekly, loadMonthly } from './loadDueTime';
+import { loadDaily, loadWeekly, loadMonthly, loadMain } from './loadPage';
+
+loadMain();
+
+
 
 const header = document.getElementById('header');
 const mainSection = document.getElementById('mainSection');
 const sidebar = document.getElementById('sidebar')
 
-const todoButton = document.createElement('button');
-todoButton.innerText = 'new To-do';
-sidebar.appendChild(todoButton);
-todoButton.addEventListener('click', () => {
-    
-    loadTask();
+const allButton = document.createElement('button');
+allButton.innerText = 'all';
+sidebar.appendChild(allButton);
+allButton.addEventListener('click', () => {
+    clearDisplay(mainSection);
+    loadMain();
 })
+
+
 
 const dailyButton = document.createElement('button');
 dailyButton.innerText = 'daily';
 sidebar.appendChild(dailyButton);
 dailyButton.addEventListener('click', () => {
+    
     clearDisplay(mainSection);
     loadDaily();
-    taskFinishTime('daily', task);
-
+    
 })
 
 const weekButton = document.createElement('button');
@@ -34,7 +40,6 @@ sidebar.appendChild(weekButton);
 weekButton.addEventListener('click',() => {
     clearDisplay(mainSection);
     loadWeekly();
-    taskFinishTime('weekly', task);
 })
 
 const monthlyButton = document.createElement('button');
@@ -43,8 +48,8 @@ sidebar.appendChild(monthlyButton);
 monthlyButton.addEventListener('click', () => {
     clearDisplay(mainSection);
     loadMonthly();
-    taskFinishTime('monthly', task);
-})
+});
+
 
 
 

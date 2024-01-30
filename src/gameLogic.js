@@ -1,22 +1,10 @@
+import { loadMain, loadDaily, loadWeekly, loadMonthly, } from "./loadPage";
+import './todoTask';
+import './loadPage';
+
 export function clearDiv(obj)  {
     obj.remove();
 }
-
-
-export function taskFinishTime(time, task) {   //need to give individual divs a class depending on which page they were created on
-
-    if(time==='daily') {
-        task.setAttribute('class', 'daily');
-    } 
-    else if(time==='weekly') {
-        task.setAttribute('class', 'weekly');
-    } 
-    else if(time==='monthly') {
-        task.setAttribute('class', 'monthly');
-    } else {
-        return;
-    }
- }
 
 
 
@@ -25,3 +13,21 @@ export function clearDisplay(task) {
         task.removeChild(task.firstChild);
         }
 }
+
+
+
+
+//  export const taskFinishTime = (timeframe, obj) => {   //need to give individual divs a class depending on which page they were created on
+
+//     if(timeframe==='daily') {
+//         obj.className = 'dailyTask';
+//     } 
+//     else if(timeframe==='weekly') {
+//         obj.className = 'weeklyTask';
+//     } 
+//     else if(timeframe==='monthly') {
+//         obj.className = 'monthlyTask';
+//     } else {
+//         return;
+//     }
+//  }

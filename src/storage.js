@@ -1,3 +1,0 @@
-import './todoTask';
-
-const divArray = []
