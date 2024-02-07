@@ -1,4 +1,4 @@
-import { loadTask } from "./todoTask";
+import { loadClass, loadTask, getTasks } from "./todoTask";
 
 export function loadMain() {
     const content = document.getElementById('mainSection');
@@ -9,11 +9,10 @@ export function loadMain() {
     todoButton.innerText = 'new To-do';
     mainSection.appendChild(todoButton);
     todoButton.addEventListener('click', () => {
-    
-    loadTask();
-    
+        loadTask();
+        loadClass();
+        
     })
-
 }
 
 export const loadDaily = () => {
@@ -27,7 +26,8 @@ export const loadDaily = () => {
     mainSection.appendChild(todoButton);
     todoButton.addEventListener('click', () => {
     
-    loadTask('daily');
+    loadTask();
+    loadClass('daily');
     
     })
 }
@@ -42,7 +42,8 @@ export const loadWeekly = () => {
     mainSection.appendChild(todoButton);
     todoButton.addEventListener('click', () => {
     
-    loadTask('weekly');
+    loadTask();
+    loadClass('weekly');
     
     })
     
@@ -59,7 +60,8 @@ export const loadMonthly = () => {
     mainSection.appendChild(todoButton);
     todoButton.addEventListener('click', () => {
     
-    loadTask('monthly');
+    loadTask();
+    loadClass('monthly');
     
     })
     

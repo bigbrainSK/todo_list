@@ -3,7 +3,7 @@ import './todoTask';
 import './gameLogic';
 
 import { clearDisplay } from './gameLogic';
-import {loadTask} from './todoTask';
+import {getTasks, loadTask} from './todoTask';
 import { loadDaily, loadWeekly, loadMonthly, loadMain } from './loadPage';
 
 loadMain();
@@ -20,6 +20,7 @@ sidebar.appendChild(allButton);
 allButton.addEventListener('click', () => {
     clearDisplay(mainSection);
     loadMain();
+    //getTasks();
 })
 
 

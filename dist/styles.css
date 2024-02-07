@@ -62,6 +62,10 @@ button {
     margin: 15px;
 }
 
+.taskButton {
+    width: 100px;
+}
+
 button:active {
     background-color:rgba(255, 255, 255, 0.213);
 }
@@ -79,6 +83,11 @@ button:hover {
     padding-top:15px;
     margin:10px;
 } */
+
+h1 {
+    width:100px;
+    height:100px;
+}
 
 .allTask {
     width:20em;

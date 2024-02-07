@@ -8,9 +8,9 @@ export function clearDiv(obj)  {
 
 
 
-export function clearDisplay(task) {
-        while(task.firstChild) {
-        task.removeChild(task.firstChild);
+export function clearDisplay(taskContainer) {
+        while(taskContainer.firstChild) {
+        taskContainer.removeChild(taskContainer.firstChild);
         }
 }
 
